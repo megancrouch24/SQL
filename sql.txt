@@ -1,0 +1,14 @@
+SHOW DATABASES;
+USE world;
+SHOW TABLES;
+DESCRIBE city;
+SELECT COUNT(*) FROM city WHERE countrycode = "USA";
+SELECT population, lifeexpectancy FROM country WHERE `name` = "Argentina";
+SELECT `name` FROM city WHERE `name` LIKE "F%" LIMIT 25;
+SELECT COUNT(city.id) FROM country c INNER JOIN city ON c.code=city.countrycode WHERE c.name = "China";
+SELECT COUNT(*) FROM country;
+SELECT name, surfacearea FROM country ORDER BY surfacearea DESC LIMIT 5;
+SELECT city.name, city.population FROM country c INNER JOIN city ON c.code=city.countrycode WHERE c.name = "JAPAN" ORDER BY city.population DESC LIMIT 5;
+ 
+
+
